@@ -1,8 +1,17 @@
 import react from "React"
-import { Container } from "@material-ui/core"
+import { Container, Box } from "@material-ui/core"
 
-const MainLayout = props => {
-  return <Container maxWidth="xl">{props.children}</Container>
+interface props {
+  header: string
+}
+
+const MainLayout: React.FC<props> = ({ header, ...props }) => {
+  return (
+    <Container maxWidth="xl">
+      <Box> {header} </Box>
+      {props.children}
+    </Container>
+  )
 }
 
 export default MainLayout
