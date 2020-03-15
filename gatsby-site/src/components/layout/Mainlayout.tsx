@@ -1,4 +1,3 @@
-import react from "React"
 import { Container, Box } from "@material-ui/core"
 import { NavBar } from "../Navbar/NavBar"
 
@@ -6,7 +5,7 @@ interface props {
   header: string
 }
 
-const MainLayout: React.FC<props> = ({ header, ...props }) => {
+export const MainLayout: React.FC<props> = ({ header, ...props }) => {
   return (
     <>
       <Box>
@@ -19,5 +18,3 @@ const MainLayout: React.FC<props> = ({ header, ...props }) => {
     </>
   )
 }
-
-export default MainLayout
